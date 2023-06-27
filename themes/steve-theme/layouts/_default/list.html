@@ -1,0 +1,32 @@
+<html>
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8"/>
+
+<style>
+.align {
+max-width: 500;
+margin: auto;
+}
+</style>
+
+<div class="align">
+<link rel="stylesheet" href="style.css">
+<html>
+
+<body>
+
+{{ range .Pages }}
+<ul>
+<li><a href="{{.Permalink}}">{{.Title}}</a></li>
+</ul>
+{{end}}
+
+<center>
+<a href="website.com">
+Home
+</a>
+</center>
+
+</body>
+</html>
