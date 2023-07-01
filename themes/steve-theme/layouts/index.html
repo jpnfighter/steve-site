@@ -9,11 +9,15 @@
 
 <body>
 
-{{ range .Pages }}
+<!-- orders content according to the "publishdate" field in front matter -->
 <ul>
-<li><a href="{{.Permalink}}">{{.Title}}</a></li>
+{{ range .Pages.ByPublishDate }}
+<li>
+<h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+<time>{{ .Date.Format "2 Jan 2006" }}</time>
+</li>
+{{ end }}
 </ul>
-{{end}}
 
 </body>
 </html>
