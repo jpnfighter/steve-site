@@ -19,3 +19,6 @@ min_version = "0.114.0"
   name = ""
   homepage = ""
   repo = ""
+
+[markup.goldmark.renderer]
+  hardWraps = false
