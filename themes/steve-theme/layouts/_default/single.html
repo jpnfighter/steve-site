@@ -9,9 +9,9 @@
 
 <body>
 
-<br>Title: {{ .Title }}
+<h1>{{ .Title }}</h1>
 
-{{ .TableOfContents }} <!--not working-->
+{{ .PublishDate.Format "02 Jan 2006" }}
 
 {{.Content}}
 
